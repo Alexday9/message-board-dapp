@@ -84,7 +84,7 @@ window.addEventListener('load', async () => {
             if (message.trim() === '') return;
 
             try {
-                await contract.methods.addMessage(message).send({ from: web3.eth.defaultAccount });
+                await contract.methods.addMessage(message).send({ from: '0x0bBc2cc0449862220c4E2358584C57cC23f2e997' });
                 messageInput.value = '';
                 refreshMessageList();
             } catch (error) {
