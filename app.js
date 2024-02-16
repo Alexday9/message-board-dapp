@@ -11,37 +11,54 @@ window.addEventListener('load', async () => {
     }
 
     // Charger le contrat intelligent
-    const contractAddress = 'YOUR_CONTRACT_ADDRESS'; // Remplacez par l'adresse de votre contrat déployé
-    const contractABI = [ // Remplacez par l'ABI de votre contrat
-        {
-            "constant": false,
-            "inputs": [
-                {
-                    "name": "_message",
-                    "type": "string"
-                }
-            ],
-            "name": "addMessage",
-            "outputs": [],
-            "payable": false,
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [],
-            "name": "getMessages",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "string[]"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        }
-    ];
+    const contractAddress = '0xb7bb1792BBfabbA361c46DC5860940e0E1bFb4b9'; // Remplacez par l'adresse de votre contrat déployé
+    const contractABI = [
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_message",
+				"type": "string"
+			}
+		],
+		"name": "addMessage",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getMessages",
+		"outputs": [
+			{
+				"internalType": "string[]",
+				"name": "",
+				"type": "string[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "messages",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
     const contract = new web3.eth.Contract(contractABI, contractAddress);
 
     // Récupérer la liste des messages enregistrés
