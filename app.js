@@ -11,7 +11,7 @@ window.addEventListener('load', async () => {
         }
 
         // Charger le contrat intelligent
-        const contractAddress = '0xe5f0332CA42459333149b67aF2d0E486D03F8a83'; // Remplacez par l'adresse de votre contrat déployé
+        const contractAddress = '0xd9145CCE52D386f254917e481eB44e9943F39138'; // Remplacez par l'adresse de votre contrat déployé
         const contractABI = [
 	{
 		"inputs": [
