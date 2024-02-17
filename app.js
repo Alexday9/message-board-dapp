@@ -59,6 +59,7 @@ window.addEventListener('load', async () => {
 		"type": "function"
 	}
 ]; // Ajoutez votre ABI ici
+	
 	    
         const contract = new web3.eth.Contract(contractABI, contractAddress);
 
